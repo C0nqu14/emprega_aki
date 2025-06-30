@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Recrutador - Emprega AKI</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <link rel="stylesheet" href="css/main.css"> <link rel="stylesheet" href="css/recrutador.css"> </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom fixed-top shadow-lg-custom">
+        <div class="container">
+            <a class="navbar-brand brand-gradient fw-bolder fs-3" href="index.html">Emprega AKI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-3">
+                        <a class="nav-link nav-link-custom" href="#" id="nav-btn-login">Sair <i class="fas fa-sign-out-alt ms-2"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark-custom sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom-sidebar active" aria-current="page" href="#overview">
+                                <i class="fas fa-tachometer-alt me-2"></i> Visão Geral
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom-sidebar" href="#my-jobs">
+                                <i class="fas fa-briefcase me-2"></i> Minhas Vagas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom-sidebar" href="#post-job">
+                                <i class="fas fa-plus-circle me-2"></i> Publicar Nova Vaga
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom-sidebar" href="#candidates">
+                                <i class="fas fa-users me-2"></i> Candidatos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom-sidebar" href="#reports">
+                                <i class="fas fa-chart-line me-2"></i> Relatórios
+                            </a>
+                        </li>
+                    </ul>
+                    <hr class="sidebar-divider">
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-custom-sidebar" href="#">
+                                <i class="fas fa-cog me-2"></i> Configurações
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5 pt-3">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2 text-highlight">Painel do Recrutador</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button class="btn btn-cta-gradient animate__animated animate__pulse animate__infinite" type="button" onclick="window.location.href='#post-job'">
+                            <i class="fas fa-plus me-2"></i> Publicar Nova Vaga
+                        </button>
+                    </div>
+                </div>
+
+                <section id="overview" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4">Visão Geral</h2>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col">
+                            <div class="card card-custom h-100 transform-on-hover">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-highlight">Vagas Ativas</h5>
+                                    <p class="display-4 fw-black text-white">12</p>
+                                    <p class="card-text text-dark-slate">Oportunidades publicadas ativamente.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card card-custom h-100 transform-on-hover">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-highlight">Candidaturas Pendentes</h5>
+                                    <p class="display-4 fw-black text-white">45</p>
+                                    <p class="card-text text-dark-slate">Candidaturas aguardando revisão.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card card-custom h-100 transform-on-hover">
+                                <div class="card-body">
+                                    <h5 class="card-title fw-bold text-highlight">Candidatos Contratados</h5>
+                                    <p class="display-4 fw-black text-white">03</p>
+                                    <p class="card-text text-dark-slate">Candidatos que fecharam vaga no último mês.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="my-jobs" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4">Minhas Vagas Publicadas</h2>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        <div class="col">
+                            <div class="card card-custom h-100 transform-on-hover">
+                                <div class="card-body">
+                                    <h5 class="card-title text-highlight">Engenheiro(a) de Software Sênior</h5>
+                                    <h6 class="card-subtitle text-dark-slate mb-2">Empresa X S.A.</h6>
+                                    <p class="card-text text-light-slate-muted">Luanda, Angola - Full-time</p>
+                                    <p class="card-text text-dark-slate-small">Procuramos um Engenheiro(a) de Software Sênior experiente para liderar nossa equipe de desenvolvimento...</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <span class="badge bg-secondary-subtle text-primary-corporate me-1">Tecnologia</span>
+                                            <span class="badge bg-secondary-subtle text-success-corporate">Desenvolvimento</span>
+                                        </div>
+                                        <p class="card-text text-muted mb-0"><small>Publicado há 5 dias</small></p>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <a href="#" class="btn btn-outline-light-custom-job"><i class="fas fa-eye me-2"></i> Ver Candidaturas (15)</a>
+                                        <a href="#" class="btn btn-outline-light-custom-job"><i class="fas fa-edit me-2"></i> Editar Vaga</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card card-custom h-100 transform-on-hover">
+                                <div class="card-body">
+                                    <h5 class="card-title text-highlight">Gestor(a) de Marketing Digital</h5>
+                                    <h6 class="card-subtitle text-dark-slate mb-2">Agência Criativa LDA</h6>
+                                    <p class="card-text text-light-slate-muted">Luanda, Angola - Híbrido</p>
+                                    <p class="card-text text-dark-slate-small">Responsável por desenvolver e implementar estratégias de marketing digital...</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <span class="badge bg-secondary-subtle text-primary-corporate me-1">Marketing</span>
+                                            <span class="badge bg-secondary-subtle text-success-corporate">Comunicação</span>
+                                        </div>
+                                        <p class="card-text text-muted mb-0"><small>Publicado há 1 semana</small></p>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <a href="#" class="btn btn-outline-light-custom-job"><i class="fas fa-eye me-2"></i> Ver Candidaturas (8)</a>
+                                        <a href="#" class="btn btn-outline-light-custom-job"><i class="fas fa-edit me-2"></i> Editar Vaga</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card card-custom h-100 transform-on-hover">
+                                <div class="card-body">
+                                    <h5 class="card-title text-highlight">Analista Financeiro Júnior</h5>
+                                    <h6 class="card-subtitle text-dark-slate mb-2">Banco AKI</h6>
+                                    <p class="card-text text-light-slate-muted">Luanda, Angola - Full-time</p>
+                                    <p class="card-text text-dark-slate-small">Apoiar na análise de dados financeiros, projeções e relatórios para a gestão...</p>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <span class="badge bg-secondary-subtle text-primary-corporate me-1">Finanças</span>
+                                            <span class="badge bg-secondary-subtle text-success-corporate">Análise</span>
+                                        </div>
+                                        <p class="card-text text-muted mb-0"><small>Publicado há 2 dias</small></p>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <a href="#" class="btn btn-outline-light-custom-job"><i class="fas fa-eye me-2"></i> Ver Candidaturas (22)</a>
+                                        <a href="#" class="btn btn-outline-light-custom-job"><i class="fas fa-edit me-2"></i> Editar Vaga</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="post-job" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4">Publicar Nova Vaga</h2>
+                    <div class="recrutador-content-section">
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="jobTitle" class="form-label">Título da Vaga</label>
+                                    <input type="text" class="form-control" id="jobTitle" placeholder="Ex: Desenvolvedor Front-end" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="companyName" class="form-label">Nome da Empresa</label>
+                                    <input type="text" class="form-control" id="companyName" placeholder="Ex: Sua Empresa S.A." required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="jobLocation" class="form-label">Localização</label>
+                                    <input type="text" class="form-control" id="jobLocation" placeholder="Ex: Luanda, Angola" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="jobType" class="form-label">Tipo de Vaga</label>
+                                    <select class="form-select" id="jobType" required>
+                                        <option value="">Selecione...</option>
+                                        <option value="full-time">Full-time</option>
+                                        <option value="part-time">Part-time</option>
+                                        <option value="hybrid">Híbrido</option>
+                                        <option value="remote">Remoto</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="jobDescription" class="form-label">Descrição da Vaga</label>
+                                    <textarea class="form-control" id="jobDescription" rows="5" placeholder="Descreva os requisitos, responsabilidades e benefícios da vaga..." required></textarea>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="jobCategory" class="form-label">Categoria da Vaga</label>
+                                    <input type="text" class="form-control" id="jobCategory" placeholder="Ex: Tecnologia, Marketing, Finanças" required>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-cta-gradient btn-lg py-3 fw-bold rounded-pill shadow-lg-custom">
+                                        <i class="fas fa-paper-plane me-2"></i> Publicar Vaga
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="candidates" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4">Candidaturas Recebidas</h2>
+                    <div class="recrutador-content-section text-center">
+                        <div class="card-body"> <i class="fas fa-inbox fa-3x mb-3 text-vibrant-cyan"></i>
+                            <p class="lead">Aqui você verá todas as candidaturas para suas vagas.</p>
+                            <p>Acompanhe, filtre e gerencie seus candidatos.</p>
+                            </div>
+                    </div>
+                </section>
+
+                <section id="reports" class="mb-5">
+                    <h2 class="h3 fw-bold mb-4">Relatórios e Estatísticas</h2>
+                    <div class="recrutador-content-section text-center">
+                        <div class="card-body"> <i class="fas fa-chart-pie fa-3x mb-3 text-vibrant-cyan"></i>
+                            <p class="lead">Obtenha insights valiosos sobre suas vagas e processos seletivos.</p>
+                            <p>Em breve: gráficos e dados detalhados para otimizar suas contratações.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="bg-dark-custom text-white py-5">
+        <div class="container text-center">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a class="brand-gradient fw-bolder fs-4 text-decoration-none" href="#">Emprega AKI</a>
+                    <p class="text-muted mt-3">A plataforma que impulsiona o talento e o desenvolvimento em Angola.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-highlight mb-3">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="profissional.html" class="footer-link">Para Profissionais</a></li>
+                        <li><a href="recrutador.html" class="footer-link">Para Empresas</a></li>
+                        <li><a href="#" class="footer-link">Sobre Nós</a></li>
+                        <li><a href="#" class="footer-link">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-highlight mb-3">Conecte-se</h5>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary-subtle">
+            <p class="mb-0 text-muted fs-6">&copy; 2025 Emprega AKI. Todos os direitos reservados. Orgulhosamente Angolano.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom border-0 shadow-lg-custom rounded-4">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 text-center">
+                    <h5 class="modal-title fw-bold text-white mb-4 fs-3" id="authModalLabel">Bem-vindo ao Novo Emprega AKI!</h5>
+                    <p class="lead text-white-75 mb-4">Escolha sua jornada para o sucesso:</p>
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-outline-light-custom btn-lg py-3 fw-bold btn-hover-grow" type="button" id="btn-modal-profissional">
+                            <i class="fas fa-user-circle me-3"></i> Sou Profissional
+                        </button>
+                        <button class="btn btn-outline-light-custom btn-lg py-3 fw-bold btn-hover-grow" type="button" id="btn-modal-recrutador">
+                            <i class="fas fa-briefcase me-3"></i> Sou Recrutador/Empresa
+                        </button>
+                    </div>
+                    <p class="mt-4 mb-0"><small class="text-white-50">Já tem conta? <a href="#" id="link-login-modal" class="text-highlight fw-bold" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Faça Login</a></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-custom border-0 shadow-lg-custom rounded-4">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5">
+                    <h5 class="modal-title fw-bold text-white mb-4 fs-3" id="loginModalLabel">Acesse Sua Conta Emprega AKI</h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label text-white-75">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="seu.email@exemplo.ao" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="loginPassword" class="form-label text-white-75">Senha</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="********" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-cta-gradient btn-lg py-3 fw-bold rounded-pill shadow-lg-custom">Entrar</button>
+                        </div>
+                    </form>
+                    <p class="mt-4 mb-0 text-center"><small class="text-white-50">Não tem conta? <a href="#" id="link-cadastro-modal" class="text-highlight fw-bold" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#authModal">Cadastre-se aqui</a></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

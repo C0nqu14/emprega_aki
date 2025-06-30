@@ -1,0 +1,176 @@
+/* Área de Conteúdo Principal (Ajustes específicos para profissional) */
+/* Os estilos gerais de `main` estão em `main.css` */
+main .h1 {
+    font-size: 2.2rem; /* Ajuste para o título principal da página */
+}
+
+/* Input de Busca */
+.input-group .form-control-custom {
+    border-radius: 0.5rem 0 0 0.5rem !important; /* Arredondado só na esquerda */
+    padding: 0.75rem 1.1rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo do input */
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    color: var(--light-slate);
+}
+.input-group .form-control-custom:focus {
+    border-color: var(--vibrant-cyan);
+    box-shadow: 0 0 0 0.15rem rgba(100, 255, 218, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input-group .btn-cta-gradient {
+    border-radius: 0 0.5rem 0.5rem 0 !important; /* Arredondado só na direita */
+    padding: 0.75rem 1.5rem;
+}
+
+
+/* Card de Vaga Específico */
+.card-custom.h-100 { /* Mantém as propriedades do card base do main.css */
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow: var(--shadow-light);
+}
+.card-custom.h-100:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.card-custom .card-body {
+    padding: 1.5rem !important;
+}
+
+.card-title.text-highlight {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-brand); /* Título da vaga com o gradiente do logo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+    font-weight: 900;
+}
+
+.card-subtitle.text-dark-slate {
+    font-size: 0.9rem;
+    color: var(--dark-slate) !important;
+    margin-bottom: 0.6rem;
+}
+
+.card-text.text-light-slate-muted {
+    font-size: 0.85rem;
+    color: var(--text-light-slate-muted) !important;
+    margin-bottom: 0.5rem;
+}
+
+.card-text.text-dark-slate-small {
+    font-size: 0.8rem;
+    color: var(--text-dark-slate-small) !important;
+    line-height: 1.5;
+    min-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.badge { /* Estilo geral para badges, pode estar no main.css se for universal */
+    font-size: 0.75rem;
+    padding: 0.4em 0.7em;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.badge.bg-secondary-subtle {
+    background-color: rgba(100, 255, 218, 0.1) !important; /* Fundo do badge sutil */
+    border: 1px solid rgba(100, 255, 218, 0.05); /* Borda sutil */
+}
+
+.badge.text-primary-corporate {
+    color: var(--text-primary-corporate) !important;
+}
+
+.badge.text-success-corporate {
+    color: var(--text-success-corporate) !important;
+}
+
+.btn-outline-light-custom-job {
+    color: var(--vibrant-cyan);
+    border: 1px solid var(--vibrant-cyan);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    transition: all var(--transition-speed);
+}
+
+.btn-outline-light-custom-job:hover {
+    background-color: var(--vibrant-cyan);
+    color: var(--dark-navy) !important;
+    box-shadow: 0 3px 10px rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Paginação */
+.pagination {
+    margin-top: 3.5rem;
+}
+
+.page-link-custom {
+    background-color: rgba(255, 255, 255, 0.05); /* Fundo dos links de paginação */
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--light-slate);
+    border-radius: 0.4rem;
+    margin: 0 3px;
+    transition: all var(--transition-speed);
+}
+
+.page-link-custom:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--vibrant-cyan);
+    box-shadow: var(--shadow-light);
+}
+
+.page-item.active .page-link-custom {
+    background-color: var(--vibrant-cyan);
+    border-color: var(--vibrant-cyan);
+    color: var(--dark-navy) !important;
+    font-weight: bold;
+    box-shadow: var(--shadow-light);
+}
+
+.page-item.disabled .page-link-custom {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-color: rgba(100, 255, 218, 0.05);
+    color: var(--dark-slate) !important;
+    cursor: not-allowed;
+}
+
+/* Media Queries para Responsividade (ajustes finos para profissional) */
+@media (max-width: 991.98px) {
+    .card-custom .card-body {
+        padding: 1.25rem !important;
+    }
+    .card-title.text-highlight {
+        font-size: 1.15rem;
+    }
+    .card-subtitle.text-dark-slate, .card-text.text-light-slate-muted, .card-text.text-dark-slate-small {
+        font-size: 0.75rem;
+    }
+    .btn-outline-light-custom-job {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.7rem;
+    }
+    .input-group .form-control-custom, .input-group .btn-cta-gradient {
+        padding: 0.65rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    main .h1 {
+        font-size: 1.8rem;
+    }
+}

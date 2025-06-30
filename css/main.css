@@ -1,0 +1,419 @@
+/* Variáveis CSS para uma Paleta de Cores Sofisticada */
+:root {
+    --dark-navy: #0A192F; /* Fundo principal escuro e elegante */
+    --vibrant-cyan: #64FFDA; /* Cor de destaque vibrante */
+    --light-slate: #CCD6F6; /* Texto principal claro */
+    --dark-slate: #8892B0; /* Texto secundário (ainda legível em fundo escuro) */
+    --off-white: #F5F5F5; /* Branco para elementos de fundo (usado mais raramente) */
+
+    --gradient-hero: linear-gradient(135deg, #0A192F 0%, #172A45 100%); /* Gradiente para a hero section */
+    --gradient-cta: linear-gradient(45deg, #64FFDA 0%, #3AB7BF 100%); /* Gradiente para CTAs */
+    --gradient-brand: linear-gradient(90deg, #64FFDA, #00FFFF); /* Gradiente para o logo */
+
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.2);
+    --shadow-bold: 0 15px 45px rgba(0, 0, 0, 0.3);
+
+    --transition-speed: 0.3s ease-in-out;
+
+    /* Novas variáveis para cores de texto específicas */
+    --text-light-slate-muted: #A3B1C6; /* Um pouco mais escuro que light-slate, mas ainda claro */
+    --text-dark-slate-small: #778899; /* Um cinza mais escuro, para textos menores */
+    --text-primary-corporate: #1E90FF; /* Azul para destaque em badges */
+    --text-success-corporate: #32CD32; /* Verde para sucesso em badges */
+}
+
+/* Tipografia Impecável */
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--light-slate); /* Cor padrão do texto, clara para fundo escuro */
+    background-color: var(--dark-navy);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evitar barra de rolagem horizontal */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900; /* Black */
+    color: var(--light-slate); /* Títulos também claros no fundo escuro */
+}
+
+a {
+    color: var(--vibrant-cyan);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+a:hover {
+    color: var(--light-slate);
+}
+
+
+/* Classes de Utilidade */
+.text-highlight {
+    color: var(--vibrant-cyan);
+}
+
+.text-dark-slate { /* Para texto em cinza escuro, útil em light backgrounds ou para contraste */
+    color: var(--dark-slate) !important;
+}
+
+.bg-dark-custom {
+    background-color: var(--dark-navy) !important;
+}
+
+.shadow-lg-custom {
+    box-shadow: var(--shadow-bold) !important;
+}
+
+.transform-on-hover { /* Usado em cards para efeito de levitação */
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.transform-on-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-bold);
+}
+
+
+/* Navbar de Luxo */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgba(10, 25, 47, 0.95) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow: var(--shadow-light);
+}
+
+.navbar-scrolled { /* Efeito de sombra ao rolar (se aplicado com JS) */
+    box-shadow: var(--shadow-medium);
+}
+
+.brand-gradient {
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+    transition: transform var(--transition-speed);
+    font-size: 2.5rem !important;
+    font-weight: 900;
+}
+
+.brand-gradient:hover {
+    transform: scale(1.05);
+}
+
+.nav-link-custom {
+    color: var(--light-slate) !important;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all var(--transition-speed);
+    font-size: 1rem;
+    margin: 0 7px;
+}
+
+.nav-link-custom::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--vibrant-cyan);
+    transition: width var(--transition-speed);
+}
+
+.nav-link-custom:hover::after,
+.nav-link-custom.active::after { /* Adiciona o estilo 'active' */
+    width: 100%;
+}
+.nav-link-custom:hover {
+    color: var(--vibrant-cyan) !important; /* Mude para cian no hover */
+}
+
+
+/* Botões de Ação (CTAs) - Estilos gerais */
+.btn-cta-gradient {
+    background: var(--gradient-cta);
+    border: none;
+    color: var(--dark-navy) !important;
+    font-weight: 700;
+    transition: all var(--transition-speed);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 40px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    box-shadow: var(--shadow-light); /* Adicionado sombra padrão */
+}
+
+.btn-cta-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: all 0.5s ease-out;
+    z-index: -1;
+}
+
+.btn-cta-gradient:hover::before {
+    left: 100%;
+}
+
+.btn-cta-gradient:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(100, 255, 218, 0.4);
+}
+
+.btn-outline-light-custom { /* Botão de contorno (ex: filtrar) */
+    border: 1px solid var(--vibrant-cyan);
+    color: var(--vibrant-cyan) !important;
+    background-color: transparent;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: all var(--transition-speed);
+}
+.btn-outline-light-custom:hover {
+    background-color: var(--vibrant-cyan);
+    color: var(--dark-navy) !important;
+    box-shadow: var(--shadow-light);
+}
+
+
+/* Footer Moderno */
+footer {
+    background-color: #05101E; /* Um tom ligeiramente mais escuro que dark-navy */
+    border-top: 1px solid rgba(100, 255, 218, 0.05);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: var(--light-slate);
+}
+
+/* Ajustes para o footer em desktop (padrão) */
+footer .container .row {
+    align-items: flex-start; /* Alinha o conteúdo das colunas ao topo */
+    text-align: left; /* Alinhamento padrão do texto à esquerda para desktop */
+}
+
+footer .col-md-4 {
+    margin-bottom: 0; /* Garante que não há margem inferior extra no desktop */
+}
+
+footer .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start; /* Alinha os ícones sociais à esquerda no desktop */
+}
+
+.footer-link {
+    color: var(--dark-slate);
+    text-decoration: none;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+    display: inline-block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.footer-link:hover {
+    color: var(--vibrant-cyan) !important;
+    transform: translateX(3px);
+}
+
+.social-icon {
+    color: var(--dark-slate);
+    font-size: 1.5rem;
+    margin: 0 8px;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.social-icon:hover {
+    color: var(--vibrant-cyan);
+    transform: translateY(-3px) scale(1.08);
+}
+
+.text-muted {
+    color: var(--dark-slate) !important;
+    font-size: 0.85rem;
+}
+
+/* Modais de Autenticação - Tema Escuro e Contraste Forte */
+.modal-content.modal-custom {
+    background: var(--gradient-hero); /* Fundo do modal com gradiente */
+    border-radius: 1.25rem !important;
+    box-shadow: var(--shadow-bold);
+    color: var(--light-slate);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    color: var(--light-slate);
+    font-weight: 900;
+}
+
+.btn-close-white {
+    filter: invert(1); /* Inverte a cor do ícone de fechar para branco */
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+}
+.btn-close-white:hover {
+    opacity: 1;
+}
+
+.form-control-custom {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo do input semi-transparente */
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    color: var(--light-slate);
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 0.5rem;
+    transition: all var(--transition-speed);
+}
+
+.form-control-custom::placeholder {
+    color: var(--dark-slate);
+    opacity: 0.7;
+}
+
+.form-control-custom:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--vibrant-cyan);
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.2);
+    color: var(--vibrant-cyan);
+}
+
+/* Botão de Contorno para Modais/Geral */
+.btn-outline-light-custom {
+    color: var(--vibrant-cyan);
+    border-color: var(--vibrant-cyan);
+    font-weight: 700;
+    transition: all var(--transition-speed);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.btn-outline-light-custom:hover {
+    background-color: var(--vibrant-cyan);
+    color: var(--dark-navy) !important;
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+    transform: translateY(-3px);
+}
+
+.btn-hover-grow { /* Usado para botões que aumentam levemente no hover */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hover-grow:hover {
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar - Estilos que são comuns a recrutador e profissional */
+.sidebar {
+    position: fixed;
+    top: var(--navbar-height, 78px); /* Usar uma variável para a altura da navbar */
+    bottom: 0;
+    left: 0;
+    z-index: 1000; /* Sidebar acima do conteúdo principal */
+    padding: 20px 0; /* Padding interno */
+    background-color: var(--dark-navy) !important; /* Fundo escuro */
+    box-shadow: var(--shadow-medium);
+    overflow-y: auto; /* Rolagem se o conteúdo for longo */
+    border-right: 1px solid rgba(100, 255, 218, 0.05);
+}
+
+@media (max-width: 991.98px) { /* Ajustado para 991.98px para alinhar com o breakpoint do Bootstrap lg */
+    .sidebar {
+        position: static; /* Volta a ser estático em telas pequenas */
+        height: auto;
+        padding-top: 0;
+        border-right: none;
+        box-shadow: none;
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 20px; /* Adicionado margem para separar do conteúdo principal */
+    }
+}
+
+.nav-link-custom-sidebar {
+    color: var(--dark-slate) !important;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    transition: all var(--transition-speed);
+    border-radius: 8px; /* Cantos arredondados */
+    margin: 0 10px 5px 10px; /* Margem para espaçamento vertical e lateral */
+}
+
+.nav-link-custom-sidebar:hover {
+    background-color: rgba(100, 255, 218, 0.08); /* Fundo sutil no hover */
+    color: var(--vibrant-cyan) !important;
+    transform: translateX(5px);
+}
+
+.nav-link-custom-sidebar.active {
+    color: var(--vibrant-cyan) !important;
+    background-color: rgba(100, 255, 218, 0.15); /* Fundo mais forte para ativo */
+    font-weight: 700;
+}
+
+.sidebar-divider {
+    border-top: 1px solid rgba(100, 255, 218, 0.05);
+    margin: 1rem 0;
+}
+
+/* Área de Conteúdo Principal - Estilos gerais */
+main {
+    background-color: var(--dark-navy); /* Garante que o fundo da área principal é consistente */
+    min-height: calc(100vh - 80px); /* Ajusta a altura mínima, considerando a navbar e o footer */
+    color: var(--light-slate); /* Cor padrão do texto na main */
+    padding-top: 90px; /* Ajuste para dar espaço abaixo da navbar fixa */
+}
+
+@media (max-width: 767.98px) { /* Bootstrap MD breakpoint */
+    main {
+        padding-top: 20px; /* Reduz o padding superior em telas muito pequenas */
+    }
+}
+
+main .h1, main .h2 { /* Títulos na área principal */
+    color: var(--light-slate);
+    font-weight: 900;
+}
+
+/* Media Queries para Responsividade (ajustes gerais) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(10, 25, 47, 0.95);
+        padding: 15px;
+        border-radius: 0 0 0.75rem 0.75rem;
+        box-shadow: var(--shadow-medium);
+        margin-top: 10px;
+    }
+    .navbar-toggler {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    /* Ajustes específicos para o footer em mobile */
+    footer .col-md-4 {
+        text-align: center !important; /* Centraliza o texto nas colunas do rodapé */
+        margin-bottom: 15px; /* Adiciona espaçamento entre as colunas no mobile */
+    }
+    footer .social-icons {
+        justify-content: center; /* Centraliza os ícones sociais no mobile */
+    }
+}

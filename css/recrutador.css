@@ -1,0 +1,225 @@
+/* Arquivo: recrutador.css */
+
+/* Área de Conteúdo Principal (Ajustes específicos para recrutador) */
+main {
+    background-color: var(--dark-navy) !important; /* Garante que a área principal tenha o fundo escuro */
+    min-height: calc(100vh - 80px); /* Ajusta a altura mínima, considerando a navbar e o footer */
+    color: var(--light-slate) !important; /* Cor padrão do texto na main e seus filhos */
+    padding-top: 90px; /* Ajuste para dar espaço abaixo da navbar fixa */
+}
+
+@media (max-width: 767.98px) { /* Bootstrap MD breakpoint */
+    main {
+        padding-top: 20px; /* Reduz o padding superior em telas muito pequenas */
+    }
+}
+
+main .h1, main .h2, main .h3, main .h4, main .h5, main .h6 { /* Títulos na área principal */
+    color: var(--light-slate) !important;
+    font-weight: 900;
+}
+
+/* NOVO: Classe robusta para seções de conteúdo no painel do recrutador (ex: Publicar Vaga, Candidaturas, Relatórios) */
+.recrutador-content-section {
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Fundo escuro sutil, importante para sobrescrever */
+    border: 1px solid rgba(100, 255, 218, 0.1) !important; /* Borda ciano sutil */
+    border-radius: 1rem !important; /* Cantos arredondados */
+    box-shadow: var(--shadow-medium) !important;
+    padding: 2rem !important; /* Espaçamento interno */
+    margin-bottom: 2rem !important; /* Espaço abaixo da seção */
+    color: var(--light-slate) !important; /* Garante que o texto dentro da seção seja claro */
+}
+
+/* Cards de Visão Geral (específicos do recrutador) - Mantidos se forem diferentes dos cards de vaga */
+.card-custom .display-4 {
+    font-size: 2.5rem; /* Tamanho padrão de display-4 pode ser grande para o card */
+}
+
+@media (max-width: 767.98px) {
+    .card-custom .display-4 {
+        font-size: 2rem; /* Ainda menor em mobile */
+    }
+}
+
+/* Card de Vaga Específico (Minhas Vagas) */
+.card-custom.h-100 { /* Mantém as propriedades do card base do main.css */
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Adicionado !important */
+    border: 1px solid rgba(100, 255, 218, 0.1) !important; /* Adicionado !important */
+    box-shadow: var(--shadow-light) !important; /* Adicionado !important */
+    color: var(--light-slate) !important; /* Garante que o texto do card seja claro */
+}
+.card-custom.h-100:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-medium) !important;
+}
+
+.card-custom .card-body {
+    padding: 1.5rem !important;
+}
+
+/* Garante que os títulos dentro dos cards sigam o gradiente/cor */
+.card-title.text-highlight {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+    font-weight: 900;
+}
+
+.card-subtitle.text-dark-slate { /* Removi !important aqui, pois a cor já é dark-slate */
+    font-size: 0.9rem;
+    color: var(--dark-slate);
+    margin-bottom: 0.6rem;
+}
+
+.card-text.text-light-slate-muted {
+    font-size: 0.85rem;
+    color: var(--text-light-slate-muted) !important;
+    margin-bottom: 0.5rem;
+}
+
+.card-text.text-dark-slate-small {
+    font-size: 0.8rem;
+    color: var(--text-dark-slate-small) !important;
+    line-height: 1.5;
+    min-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.7em;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.badge.bg-secondary-subtle {
+    background-color: rgba(100, 255, 218, 0.1) !important;
+    border: 1px solid rgba(100, 255, 218, 0.05);
+}
+
+.badge.text-primary-corporate {
+    color: var(--text-primary-corporate) !important;
+}
+
+.badge.text-success-corporate {
+    color: var(--text-success-corporate) !important;
+}
+
+.btn-outline-light-custom-job {
+    color: var(--vibrant-cyan);
+    border: 1px solid var(--vibrant-cyan);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+    transition: all var(--transition-speed);
+}
+
+.btn-outline-light-custom-job:hover {
+    background-color: var(--vibrant-cyan);
+    color: var(--dark-navy) !important;
+    box-shadow: 0 3px 10px rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Formulário de Publicar Vaga - Ajustes específicos */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--light-slate) !important; /* Garante que o label tenha a cor clara */
+}
+
+/* SOBRESCREVE BOOTSTRAP: Estilo para inputs de formulário genéricos (inclui textareas) */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Fundo escuro sutil */
+    border: 1px solid rgba(100, 255, 218, 0.2) !important; /* Borda ciano sutil */
+    color: var(--light-slate) !important; /* Texto claro */
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 0.5rem !important;
+    transition: all var(--transition-speed);
+}
+
+.form-control::placeholder {
+    color: var(--dark-slate) !important; /* Placeholder em tom mais escuro */
+    opacity: 0.7 !important;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--vibrant-cyan) !important;
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.2) !important;
+    color: var(--vibrant-cyan) !important;
+}
+
+/* NOVO: Estilo para select (dropdowns) */
+.form-select {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(100, 255, 218, 0.2) !important;
+    color: var(--light-slate) !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.95rem !important;
+    border-radius: 0.5rem !important;
+    transition: all var(--transition-speed);
+    /* Setas customizadas para o select (cor da seta deve ser clara) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23CCD6F6' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 0.75rem center !important;
+    background-size: 16px 12px !important;
+}
+
+.form-select:focus {
+    border-color: var(--vibrant-cyan) !important;
+    box-shadow: 0 0 0 0.25rem rgba(100, 255, 218, 0.2) !important;
+}
+
+/* NOVO: Estilos para elementos de tabela (Candidaturas, Relatórios) */
+.table {
+    --bs-table-bg: rgba(255, 255, 255, 0.05) !important; /* Fundo da tabela escuro */
+    --bs-table-color: var(--light-slate) !important; /* Cor do texto da tabela */
+    --bs-table-striped-bg: rgba(255, 255, 255, 0.03) !important; /* Fundo de linhas alternadas */
+    --bs-table-striped-color: var(--light-slate) !important;
+    --bs-table-active-bg: rgba(100, 255, 218, 0.1) !important; /* Fundo de linha ativa/hover */
+    --bs-table-hover-bg: rgba(100, 255, 218, 0.08) !important; /* Fundo de linha ao passar o mouse */
+    border: 1px solid rgba(100, 255, 218, 0.1) !important;
+    border-radius: 0.75rem !important; /* Cantos arredondados para a tabela */
+    overflow: hidden !important; /* Garante que os cantos arredondados sejam visíveis */
+}
+
+.table thead {
+    border-bottom: 2px solid var(--vibrant-cyan) !important; /* Borda mais forte no cabeçalho */
+}
+
+.table th, .table td {
+    border-color: rgba(100, 255, 218, 0.08) !important; /* Borda interna das células */
+}
+
+.table-responsive { /* Garante que tabelas muito largas tenham rolagem horizontal */
+    border-radius: 0.75rem !important;
+    overflow-x: auto !important;
+}
+
+/* Media Queries para Responsividade (ajustes finos para recrutador) */
+@media (max-width: 991.98px) {
+    .recrutador-content-section {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    main .h1 {
+        font-size: 1.8rem;
+    }
+    .recrutador-content-section {
+        padding: 1rem !important; /* Reduz padding em telas muito pequenas */
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Emprega AKI",
+    "short_name": "Emprega AKI",
+    "description": "A plataforma inteligente que une talentos angolanos às oportunidades mais inovadoras.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#0F1C2E",
+    "theme_color": "#00BCD4"
+}
